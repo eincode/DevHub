@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders button correctly 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 5,
+        "height": 40,
+        "justifyContent": "center",
+        "marginVertical": 5,
+        "width": 675,
+      },
+      Object {
+        "backgroundColor": "#008BA3",
+      },
+    ]
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+  >
+    Button
+  </Text>
+</TouchableOpacity>
+`;

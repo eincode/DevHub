@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders CustomTextInput correctly 1`] = `
+<Component
+  style={
+    Object {
+      "alignItems": "center",
+      "borderColor": "#B0B0B0",
+      "borderRadius": 5,
+      "borderWidth": 0.3,
+      "flexDirection": "row",
+      "height": 40,
+      "marginVertical": 5,
+      "width": 675,
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    style={
+      Object {
+        "flex": 2,
+        "marginHorizontal": 10,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+</Component>
+`;
