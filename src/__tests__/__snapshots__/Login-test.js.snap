@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Login Correctly 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+  >
+    Welcome to
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 30,
+        "fontWeight": "bold",
+        "marginVertical": 10,
+      }
+    }
+  >
+    DevHub
+  </Text>
+  <CustomTextInput
+    autoCapitalize="none"
+    keyboardType="email-address"
+    onChangeText={[Function]}
+    onSubmitEditing={[Function]}
+    placeholder="Email"
+    returnKeyType="next"
+  />
+  <CustomTextInput
+    autoCapitalize="none"
+    onChangeText={[Function]}
+    onSubmitEditing={[Function]}
+    placeholder="Password"
+    returnKeyType="done"
+    secureTextEntry={true}
+  />
+  <CustomButton
+    color="#008BA3"
+    onPress={[Function]}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "white",
+        }
+      }
+    >
+      Login
+    </Text>
+  </CustomButton>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "alignSelf": "center",
+        "bottom": 30,
+        "position": "absolute",
+      }
+    }
+  >
+    Register here
+  </Text>
+</Component>
+`;
