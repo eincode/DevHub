@@ -1,12 +1,19 @@
-/* @flow */
-
 import React, { Component } from 'react'
 import { View, Text, StyleSheet, TextInput } from 'react-native'
 
 import constants from '../config/constants'
 
 export default class CustomTextInput extends Component {
-  focus = () => this.textInputRef.focus()
+
+  constructor(props) {
+    super(props)
+    this.textInputRef = React.createRef()
+    this.focus = this.focus.bind(this)
+  }
+
+  focus() {
+    this.textInputRef.current.focus()
+  }
 
   render() {
     const { children, ...otherProps } = this.props
@@ -14,7 +21,7 @@ export default class CustomTextInput extends Component {
       <View style={styles.container}>
         {children}
         <TextInput
-          ref={ref => (this.textInputRef = ref)}
+          ref={this.textInputRef}
           style={styles.textInput}
           underlineColorAndroid={'transparent'}
           {...otherProps}

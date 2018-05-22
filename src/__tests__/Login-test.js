@@ -23,9 +23,25 @@ describe('Changing email and password state', () => {
   it('State changes as expected', () => {
     const wrapper = shallow(<Login />)
     expect(wrapper).toMatchSnapshot()
-    wrapper.instance()._handleTextInputChange({ email: 'bob@mail.com' })
-    wrapper.instance()._handleTextInputChange({ password: 'password' })
+    wrapper.instance()._handleTextInputChange('email', 'bob@mail.com')
+    wrapper.instance()._handleTextInputChange('password', 'password')
     expect(wrapper.state().email).toEqual('bob@mail.com')
     expect(wrapper.state().password).toEqual('password')
+  })
+})
+
+describe('Changing isLoading state', () => {
+  it('State changes as expected', () => {
+    const mockRef = {
+      current: {
+        focus: jest.fn()
+      }
+    }
+    const wrapper = shallow(<Login />)
+    expect(wrapper).toMatchSnapshot()
+    wrapper.instance()._handleSubmitEditing('done')
+    expect(wrapper.state().isLoggingIn).toEqual(true)
+    wrapper.instance()._handleSubmitEditing(mockRef)
+    expect(mockRef.current.focus).toBeCalled()
   })
 })

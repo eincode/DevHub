@@ -20,13 +20,16 @@ export default class Login extends Component {
       password: '',
       isLoggingIn: false
     }
+    this.passwordRef = React.createRef()
+    this.emailRef = React.createRef()
 
+    this._handleTextInputChange = this._handleTextInputChange.bind(this)
     this._handleSubmitEditing = this._handleSubmitEditing.bind(this)
     this._handleLoginPress = this._handleLoginPress.bind(this)
   }
 
-  _handleTextInputChange(stateChange) {
-    this.setState(stateChange)
+  _handleTextInputChange(state, value) {
+    this.setState({ [state]: value })
   }
 
   _handleSubmitEditing(nextRef) {
@@ -34,7 +37,7 @@ export default class Login extends Component {
       this._handleLoginPress()
       return
     }
-    nextRef.focus()
+    nextRef.current.focus()
   }
 
   _handleLoginPress() {
@@ -47,24 +50,24 @@ export default class Login extends Component {
         <Text>Welcome to</Text>
         <Text style={styles.title}>DevHub</Text>
         <CustomTextInput
-          ref={ref => (this.emailRef = ref)}
+          ref={this.emailRef}
           placeholder={'Email'}
           keyboardType={'email-address'}
           autoCapitalize={'none'}
           returnKeyType={'next'}
-          onChangeText={value => this._handleTextInputChange({ email: value })}
+          onChangeText={this._handleTextInputChange.bind(this, 'email')}
           onSubmitEditing={this._handleSubmitEditing.bind(this, this.passwordRef)}
         />
         <CustomTextInput
-          ref={ref => (this.passwordRef = ref)}
+          ref={this.passwordRef}
           placeholder={'Password'}
           secureTextEntry={true}
           autoCapitalize={'none'}
           returnKeyType={'done'}
-          onChangeText={value => this._handleTextInputChange({ password: value })}
+          onChangeText={this._handleTextInputChange.bind(this, 'password')}
           onSubmitEditing={this._handleSubmitEditing.bind(this, 'done')}
         />
-        <CustomButton color={constants.PRIMARY_COLOR} onPress={() => this._handleLoginPress()}>
+        <CustomButton color={constants.PRIMARY_COLOR} onPress={this._handleLoginPress}>
           {this.state.isLoggingIn ? (
             <ActivityIndicator color={'white'}/>
           ) : (
