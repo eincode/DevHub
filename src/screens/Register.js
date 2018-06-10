@@ -1,14 +1,11 @@
-/* @flow */
-
 import React, { Component } from 'react'
 import { View, Text, StyleSheet, ActivityIndicator } from 'react-native'
 
 import CustomButton from '../components/CustomButton'
 import CustomTextInput from '../components/CustomTextInput'
+import constants from '../config/constants';
 
-import constants from '../config/constants'
-
-export default class Login extends Component {
+export default class Register extends Component {
   static navigationOptions = {
     header: null
   }
@@ -18,14 +15,16 @@ export default class Login extends Component {
     this.state = {
       email: '',
       password: '',
-      isLoggingIn: false
+      confirmPassword: '',
+      isRegistering: false
     }
-    this.passwordRef = React.createRef()
+
     this.emailRef = React.createRef()
+    this.passwordRef = React.createRef()
+    this.confirmPasswordRef = React.createRef()
 
     this._handleTextInputChange = this._handleTextInputChange.bind(this)
     this._handleSubmitEditing = this._handleSubmitEditing.bind(this)
-    this._handleLoginPress = this._handleLoginPress.bind(this)
     this._handleRegisterPress = this._handleRegisterPress.bind(this)
   }
 
@@ -35,25 +34,20 @@ export default class Login extends Component {
 
   _handleSubmitEditing(nextRef) {
     if (typeof nextRef === 'string') {
-      this._handleLoginPress()
+      this._handleRegisterPress()
       return
     }
     nextRef.current.focus()
   }
 
-  _handleLoginPress() {
-    this.setState({ isLoggingIn: !this.state.isLoggingIn })
-  }
-
   _handleRegisterPress() {
-    this.props.navigation.navigate('Register')
+    this.setState({ isRegistering: !this.state.isRegistering })
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>Welcome to</Text>
-        <Text style={styles.title}>DevHub</Text>
+        <Text style={styles.title}> DevHub </Text>
         <CustomTextInput
           ref={this.emailRef}
           placeholder={'Email'}
@@ -66,20 +60,26 @@ export default class Login extends Component {
         <CustomTextInput
           ref={this.passwordRef}
           placeholder={'Password'}
-          secureTextEntry={true}
           autoCapitalize={'none'}
-          returnKeyType={'done'}
+          returnKeyType={'next'}
           onChangeText={this._handleTextInputChange.bind(this, 'password')}
+          onSubmitEditing={this._handleSubmitEditing.bind(this, this.confirmPasswordRef)}
+        />
+        <CustomTextInput
+          ref={this.confirmPasswordRef}
+          placeholder={'Confirm Password'}
+          autoCapitalize={'none'}
+          returnKeyType={'next'}
+          onChangeText={this._handleTextInputChange.bind(this, 'confirmPassword')}
           onSubmitEditing={this._handleSubmitEditing.bind(this, 'done')}
         />
-        <CustomButton color={constants.PRIMARY_COLOR} onPress={this._handleLoginPress}>
-          {this.state.isLoggingIn ? (
+        <CustomButton color={constants.PRIMARY_COLOR} onPress={this._handleRegisterPress}>
+          {this.state.isRegistering ? (
             <ActivityIndicator color={'white'}/>
           ) : (
-            <Text style={{ color: 'white' }}>Login</Text>
+            <Text style={{ color: 'white' }}>Register</Text>
           )}
         </CustomButton>
-        <Text style={styles.caption} onPress={this._handleRegisterPress}>Don't have an account? Register here</Text>
       </View>
     )
   }
@@ -88,8 +88,8 @@ export default class Login extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
     justifyContent: 'center',
+    padding: 20,
     backgroundColor: 'white'
   },
 
@@ -97,11 +97,5 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     marginVertical: 10
-  },
-
-  caption: {
-    position: 'absolute',
-    bottom: 30,
-    alignSelf: 'center'
   }
 })
