@@ -14,7 +14,7 @@ exports[`Renders button correctly 1`] = `
         "width": 675,
       },
       Object {
-        "backgroundColor": "#008BA3",
+        "backgroundColor": "#39A9DB",
       },
     ]
   }

@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Changing email and password state State changes as expected 1`] = `
+exports[`Changing isRegistering state State changes as expected 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Login />,
+  Symbol(enzyme.__unrendered__): <Register />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -22,13 +22,6 @@ ShallowWrapper {
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
-        >
-          Welcome to
-        </Text>,
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "fontSize": 30,
@@ -37,7 +30,7 @@ ShallowWrapper {
             }
           }
         >
-          DevHub
+           DevHub 
         </Text>,
         <CustomTextInput
           autoCapitalize="none"
@@ -52,8 +45,14 @@ ShallowWrapper {
           onChangeText={[Function]}
           onSubmitEditing={[Function]}
           placeholder="Password"
-          returnKeyType="done"
-          secureTextEntry={true}
+          returnKeyType="next"
+        />,
+        <CustomTextInput
+          autoCapitalize="none"
+          onChangeText={[Function]}
+          onSubmitEditing={[Function]}
+          placeholder="Confirm Password"
+          returnKeyType="next"
         />,
         <CustomButton
           color="#39A9DB"
@@ -69,24 +68,9 @@ ShallowWrapper {
               }
             }
           >
-            Login
+            Register
           </Text>
         </CustomButton>,
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          onPress={[Function]}
-          style={
-            Object {
-              "alignSelf": "center",
-              "bottom": 30,
-              "position": "absolute",
-            }
-          }
-        >
-          Don't have an account? Register here
-        </Text>,
       ],
       "style": Object {
         "backgroundColor": "white",
@@ -104,21 +88,7 @@ ShallowWrapper {
         "props": Object {
           "accessible": true,
           "allowFontScaling": true,
-          "children": "Welcome to",
-          "ellipsizeMode": "tail",
-        },
-        "ref": null,
-        "rendered": "Welcome to",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "accessible": true,
-          "allowFontScaling": true,
-          "children": "DevHub",
+          "children": " DevHub ",
           "ellipsizeMode": "tail",
           "style": Object {
             "fontSize": 30,
@@ -127,7 +97,7 @@ ShallowWrapper {
           },
         },
         "ref": null,
-        "rendered": "DevHub",
+        "rendered": " DevHub ",
         "type": [Function],
       },
       Object {
@@ -157,8 +127,24 @@ ShallowWrapper {
           "onChangeText": [Function],
           "onSubmitEditing": [Function],
           "placeholder": "Password",
-          "returnKeyType": "done",
-          "secureTextEntry": true,
+          "returnKeyType": "next",
+        },
+        "ref": Object {
+          "current": null,
+        },
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "autoCapitalize": "none",
+          "onChangeText": [Function],
+          "onSubmitEditing": [Function],
+          "placeholder": "Confirm Password",
+          "returnKeyType": "next",
         },
         "ref": Object {
           "current": null,
@@ -181,7 +167,7 @@ ShallowWrapper {
               }
             }
           >
-            Login
+            Register
           </Text>,
           "color": "#39A9DB",
           "onPress": [Function],
@@ -194,36 +180,16 @@ ShallowWrapper {
           "props": Object {
             "accessible": true,
             "allowFontScaling": true,
-            "children": "Login",
+            "children": "Register",
             "ellipsizeMode": "tail",
             "style": Object {
               "color": "white",
             },
           },
           "ref": null,
-          "rendered": "Login",
+          "rendered": "Register",
           "type": [Function],
         },
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "accessible": true,
-          "allowFontScaling": true,
-          "children": "Don't have an account? Register here",
-          "ellipsizeMode": "tail",
-          "onPress": [Function],
-          "style": Object {
-            "alignSelf": "center",
-            "bottom": 30,
-            "position": "absolute",
-          },
-        },
-        "ref": null,
-        "rendered": "Don't have an account? Register here",
         "type": [Function],
       },
     ],
@@ -240,13 +206,6 @@ ShallowWrapper {
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
-          >
-            Welcome to
-          </Text>,
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "fontSize": 30,
@@ -255,7 +214,7 @@ ShallowWrapper {
               }
             }
           >
-            DevHub
+             DevHub 
           </Text>,
           <CustomTextInput
             autoCapitalize="none"
@@ -270,8 +229,14 @@ ShallowWrapper {
             onChangeText={[Function]}
             onSubmitEditing={[Function]}
             placeholder="Password"
-            returnKeyType="done"
-            secureTextEntry={true}
+            returnKeyType="next"
+          />,
+          <CustomTextInput
+            autoCapitalize="none"
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            placeholder="Confirm Password"
+            returnKeyType="next"
           />,
           <CustomButton
             color="#39A9DB"
@@ -287,24 +252,9 @@ ShallowWrapper {
                 }
               }
             >
-              Login
+              Register
             </Text>
           </CustomButton>,
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            onPress={[Function]}
-            style={
-              Object {
-                "alignSelf": "center",
-                "bottom": 30,
-                "position": "absolute",
-              }
-            }
-          >
-            Don't have an account? Register here
-          </Text>,
         ],
         "style": Object {
           "backgroundColor": "white",
@@ -322,21 +272,7 @@ ShallowWrapper {
           "props": Object {
             "accessible": true,
             "allowFontScaling": true,
-            "children": "Welcome to",
-            "ellipsizeMode": "tail",
-          },
-          "ref": null,
-          "rendered": "Welcome to",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "accessible": true,
-            "allowFontScaling": true,
-            "children": "DevHub",
+            "children": " DevHub ",
             "ellipsizeMode": "tail",
             "style": Object {
               "fontSize": 30,
@@ -345,7 +281,7 @@ ShallowWrapper {
             },
           },
           "ref": null,
-          "rendered": "DevHub",
+          "rendered": " DevHub ",
           "type": [Function],
         },
         Object {
@@ -375,8 +311,24 @@ ShallowWrapper {
             "onChangeText": [Function],
             "onSubmitEditing": [Function],
             "placeholder": "Password",
-            "returnKeyType": "done",
-            "secureTextEntry": true,
+            "returnKeyType": "next",
+          },
+          "ref": Object {
+            "current": null,
+          },
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "autoCapitalize": "none",
+            "onChangeText": [Function],
+            "onSubmitEditing": [Function],
+            "placeholder": "Confirm Password",
+            "returnKeyType": "next",
           },
           "ref": Object {
             "current": null,
@@ -399,7 +351,7 @@ ShallowWrapper {
                 }
               }
             >
-              Login
+              Register
             </Text>,
             "color": "#39A9DB",
             "onPress": [Function],
@@ -412,36 +364,16 @@ ShallowWrapper {
             "props": Object {
               "accessible": true,
               "allowFontScaling": true,
-              "children": "Login",
+              "children": "Register",
               "ellipsizeMode": "tail",
               "style": Object {
                 "color": "white",
               },
             },
             "ref": null,
-            "rendered": "Login",
+            "rendered": "Register",
             "type": [Function],
           },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "accessible": true,
-            "allowFontScaling": true,
-            "children": "Don't have an account? Register here",
-            "ellipsizeMode": "tail",
-            "onPress": [Function],
-            "style": Object {
-              "alignSelf": "center",
-              "bottom": 30,
-              "position": "absolute",
-            },
-          },
-          "ref": null,
-          "rendered": "Don't have an account? Register here",
           "type": [Function],
         },
       ],
@@ -458,11 +390,11 @@ ShallowWrapper {
 }
 `;
 
-exports[`Changing isLoading state State changes as expected 1`] = `
+exports[`Changing text input state State changes as expected 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Login />,
+  Symbol(enzyme.__unrendered__): <Register />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -480,13 +412,6 @@ ShallowWrapper {
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
-        >
-          Welcome to
-        </Text>,
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "fontSize": 30,
@@ -495,7 +420,7 @@ ShallowWrapper {
             }
           }
         >
-          DevHub
+           DevHub 
         </Text>,
         <CustomTextInput
           autoCapitalize="none"
@@ -510,8 +435,14 @@ ShallowWrapper {
           onChangeText={[Function]}
           onSubmitEditing={[Function]}
           placeholder="Password"
-          returnKeyType="done"
-          secureTextEntry={true}
+          returnKeyType="next"
+        />,
+        <CustomTextInput
+          autoCapitalize="none"
+          onChangeText={[Function]}
+          onSubmitEditing={[Function]}
+          placeholder="Confirm Password"
+          returnKeyType="next"
         />,
         <CustomButton
           color="#39A9DB"
@@ -527,24 +458,9 @@ ShallowWrapper {
               }
             }
           >
-            Login
+            Register
           </Text>
         </CustomButton>,
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          onPress={[Function]}
-          style={
-            Object {
-              "alignSelf": "center",
-              "bottom": 30,
-              "position": "absolute",
-            }
-          }
-        >
-          Don't have an account? Register here
-        </Text>,
       ],
       "style": Object {
         "backgroundColor": "white",
@@ -562,21 +478,7 @@ ShallowWrapper {
         "props": Object {
           "accessible": true,
           "allowFontScaling": true,
-          "children": "Welcome to",
-          "ellipsizeMode": "tail",
-        },
-        "ref": null,
-        "rendered": "Welcome to",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "accessible": true,
-          "allowFontScaling": true,
-          "children": "DevHub",
+          "children": " DevHub ",
           "ellipsizeMode": "tail",
           "style": Object {
             "fontSize": 30,
@@ -585,7 +487,7 @@ ShallowWrapper {
           },
         },
         "ref": null,
-        "rendered": "DevHub",
+        "rendered": " DevHub ",
         "type": [Function],
       },
       Object {
@@ -615,8 +517,24 @@ ShallowWrapper {
           "onChangeText": [Function],
           "onSubmitEditing": [Function],
           "placeholder": "Password",
-          "returnKeyType": "done",
-          "secureTextEntry": true,
+          "returnKeyType": "next",
+        },
+        "ref": Object {
+          "current": null,
+        },
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "autoCapitalize": "none",
+          "onChangeText": [Function],
+          "onSubmitEditing": [Function],
+          "placeholder": "Confirm Password",
+          "returnKeyType": "next",
         },
         "ref": Object {
           "current": null,
@@ -639,7 +557,7 @@ ShallowWrapper {
               }
             }
           >
-            Login
+            Register
           </Text>,
           "color": "#39A9DB",
           "onPress": [Function],
@@ -652,36 +570,16 @@ ShallowWrapper {
           "props": Object {
             "accessible": true,
             "allowFontScaling": true,
-            "children": "Login",
+            "children": "Register",
             "ellipsizeMode": "tail",
             "style": Object {
               "color": "white",
             },
           },
           "ref": null,
-          "rendered": "Login",
+          "rendered": "Register",
           "type": [Function],
         },
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "accessible": true,
-          "allowFontScaling": true,
-          "children": "Don't have an account? Register here",
-          "ellipsizeMode": "tail",
-          "onPress": [Function],
-          "style": Object {
-            "alignSelf": "center",
-            "bottom": 30,
-            "position": "absolute",
-          },
-        },
-        "ref": null,
-        "rendered": "Don't have an account? Register here",
         "type": [Function],
       },
     ],
@@ -698,13 +596,6 @@ ShallowWrapper {
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
-          >
-            Welcome to
-          </Text>,
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "fontSize": 30,
@@ -713,7 +604,7 @@ ShallowWrapper {
               }
             }
           >
-            DevHub
+             DevHub 
           </Text>,
           <CustomTextInput
             autoCapitalize="none"
@@ -728,8 +619,14 @@ ShallowWrapper {
             onChangeText={[Function]}
             onSubmitEditing={[Function]}
             placeholder="Password"
-            returnKeyType="done"
-            secureTextEntry={true}
+            returnKeyType="next"
+          />,
+          <CustomTextInput
+            autoCapitalize="none"
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            placeholder="Confirm Password"
+            returnKeyType="next"
           />,
           <CustomButton
             color="#39A9DB"
@@ -745,24 +642,9 @@ ShallowWrapper {
                 }
               }
             >
-              Login
+              Register
             </Text>
           </CustomButton>,
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            onPress={[Function]}
-            style={
-              Object {
-                "alignSelf": "center",
-                "bottom": 30,
-                "position": "absolute",
-              }
-            }
-          >
-            Don't have an account? Register here
-          </Text>,
         ],
         "style": Object {
           "backgroundColor": "white",
@@ -780,21 +662,7 @@ ShallowWrapper {
           "props": Object {
             "accessible": true,
             "allowFontScaling": true,
-            "children": "Welcome to",
-            "ellipsizeMode": "tail",
-          },
-          "ref": null,
-          "rendered": "Welcome to",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "accessible": true,
-            "allowFontScaling": true,
-            "children": "DevHub",
+            "children": " DevHub ",
             "ellipsizeMode": "tail",
             "style": Object {
               "fontSize": 30,
@@ -803,7 +671,7 @@ ShallowWrapper {
             },
           },
           "ref": null,
-          "rendered": "DevHub",
+          "rendered": " DevHub ",
           "type": [Function],
         },
         Object {
@@ -833,8 +701,24 @@ ShallowWrapper {
             "onChangeText": [Function],
             "onSubmitEditing": [Function],
             "placeholder": "Password",
-            "returnKeyType": "done",
-            "secureTextEntry": true,
+            "returnKeyType": "next",
+          },
+          "ref": Object {
+            "current": null,
+          },
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "autoCapitalize": "none",
+            "onChangeText": [Function],
+            "onSubmitEditing": [Function],
+            "placeholder": "Confirm Password",
+            "returnKeyType": "next",
           },
           "ref": Object {
             "current": null,
@@ -857,7 +741,7 @@ ShallowWrapper {
                 }
               }
             >
-              Login
+              Register
             </Text>,
             "color": "#39A9DB",
             "onPress": [Function],
@@ -870,36 +754,16 @@ ShallowWrapper {
             "props": Object {
               "accessible": true,
               "allowFontScaling": true,
-              "children": "Login",
+              "children": "Register",
               "ellipsizeMode": "tail",
               "style": Object {
                 "color": "white",
               },
             },
             "ref": null,
-            "rendered": "Login",
+            "rendered": "Register",
             "type": [Function],
           },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "accessible": true,
-            "allowFontScaling": true,
-            "children": "Don't have an account? Register here",
-            "ellipsizeMode": "tail",
-            "onPress": [Function],
-            "style": Object {
-              "alignSelf": "center",
-              "bottom": 30,
-              "position": "absolute",
-            },
-          },
-          "ref": null,
-          "rendered": "Don't have an account? Register here",
           "type": [Function],
         },
       ],
@@ -916,7 +780,7 @@ ShallowWrapper {
 }
 `;
 
-exports[`Renders Login Correctly 1`] = `
+exports[`Renders Register Correctly 1`] = `
 <Component
   style={
     Object {
@@ -931,13 +795,6 @@ exports[`Renders Login Correctly 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-  >
-    Welcome to
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "fontSize": 30,
@@ -946,7 +803,7 @@ exports[`Renders Login Correctly 1`] = `
       }
     }
   >
-    DevHub
+     DevHub 
   </Text>
   <CustomTextInput
     autoCapitalize="none"
@@ -961,8 +818,14 @@ exports[`Renders Login Correctly 1`] = `
     onChangeText={[Function]}
     onSubmitEditing={[Function]}
     placeholder="Password"
-    returnKeyType="done"
-    secureTextEntry={true}
+    returnKeyType="next"
+  />
+  <CustomTextInput
+    autoCapitalize="none"
+    onChangeText={[Function]}
+    onSubmitEditing={[Function]}
+    placeholder="Confirm Password"
+    returnKeyType="next"
   />
   <CustomButton
     color="#39A9DB"
@@ -978,32 +841,17 @@ exports[`Renders Login Correctly 1`] = `
         }
       }
     >
-      Login
+      Register
     </Text>
   </CustomButton>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    onPress={[Function]}
-    style={
-      Object {
-        "alignSelf": "center",
-        "bottom": 30,
-        "position": "absolute",
-      }
-    }
-  >
-    Don't have an account? Register here
-  </Text>
 </Component>
 `;
 
-exports[`Testing Login button to change state State changes as expected 1`] = `
+exports[`Testing Register button to change state State changes as expected 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Login />,
+  Symbol(enzyme.__unrendered__): <Register />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -1021,13 +869,6 @@ ShallowWrapper {
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
-        >
-          Welcome to
-        </Text>,
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "fontSize": 30,
@@ -1036,7 +877,7 @@ ShallowWrapper {
             }
           }
         >
-          DevHub
+           DevHub 
         </Text>,
         <CustomTextInput
           autoCapitalize="none"
@@ -1051,8 +892,14 @@ ShallowWrapper {
           onChangeText={[Function]}
           onSubmitEditing={[Function]}
           placeholder="Password"
-          returnKeyType="done"
-          secureTextEntry={true}
+          returnKeyType="next"
+        />,
+        <CustomTextInput
+          autoCapitalize="none"
+          onChangeText={[Function]}
+          onSubmitEditing={[Function]}
+          placeholder="Confirm Password"
+          returnKeyType="next"
         />,
         <CustomButton
           color="#39A9DB"
@@ -1068,24 +915,9 @@ ShallowWrapper {
               }
             }
           >
-            Login
+            Register
           </Text>
         </CustomButton>,
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          onPress={[Function]}
-          style={
-            Object {
-              "alignSelf": "center",
-              "bottom": 30,
-              "position": "absolute",
-            }
-          }
-        >
-          Don't have an account? Register here
-        </Text>,
       ],
       "style": Object {
         "backgroundColor": "white",
@@ -1103,21 +935,7 @@ ShallowWrapper {
         "props": Object {
           "accessible": true,
           "allowFontScaling": true,
-          "children": "Welcome to",
-          "ellipsizeMode": "tail",
-        },
-        "ref": null,
-        "rendered": "Welcome to",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "accessible": true,
-          "allowFontScaling": true,
-          "children": "DevHub",
+          "children": " DevHub ",
           "ellipsizeMode": "tail",
           "style": Object {
             "fontSize": 30,
@@ -1126,7 +944,7 @@ ShallowWrapper {
           },
         },
         "ref": null,
-        "rendered": "DevHub",
+        "rendered": " DevHub ",
         "type": [Function],
       },
       Object {
@@ -1156,8 +974,24 @@ ShallowWrapper {
           "onChangeText": [Function],
           "onSubmitEditing": [Function],
           "placeholder": "Password",
-          "returnKeyType": "done",
-          "secureTextEntry": true,
+          "returnKeyType": "next",
+        },
+        "ref": Object {
+          "current": null,
+        },
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "autoCapitalize": "none",
+          "onChangeText": [Function],
+          "onSubmitEditing": [Function],
+          "placeholder": "Confirm Password",
+          "returnKeyType": "next",
         },
         "ref": Object {
           "current": null,
@@ -1180,7 +1014,7 @@ ShallowWrapper {
               }
             }
           >
-            Login
+            Register
           </Text>,
           "color": "#39A9DB",
           "onPress": [Function],
@@ -1193,36 +1027,16 @@ ShallowWrapper {
           "props": Object {
             "accessible": true,
             "allowFontScaling": true,
-            "children": "Login",
+            "children": "Register",
             "ellipsizeMode": "tail",
             "style": Object {
               "color": "white",
             },
           },
           "ref": null,
-          "rendered": "Login",
+          "rendered": "Register",
           "type": [Function],
         },
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "accessible": true,
-          "allowFontScaling": true,
-          "children": "Don't have an account? Register here",
-          "ellipsizeMode": "tail",
-          "onPress": [Function],
-          "style": Object {
-            "alignSelf": "center",
-            "bottom": 30,
-            "position": "absolute",
-          },
-        },
-        "ref": null,
-        "rendered": "Don't have an account? Register here",
         "type": [Function],
       },
     ],
@@ -1239,13 +1053,6 @@ ShallowWrapper {
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
-          >
-            Welcome to
-          </Text>,
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "fontSize": 30,
@@ -1254,7 +1061,7 @@ ShallowWrapper {
               }
             }
           >
-            DevHub
+             DevHub 
           </Text>,
           <CustomTextInput
             autoCapitalize="none"
@@ -1269,8 +1076,14 @@ ShallowWrapper {
             onChangeText={[Function]}
             onSubmitEditing={[Function]}
             placeholder="Password"
-            returnKeyType="done"
-            secureTextEntry={true}
+            returnKeyType="next"
+          />,
+          <CustomTextInput
+            autoCapitalize="none"
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            placeholder="Confirm Password"
+            returnKeyType="next"
           />,
           <CustomButton
             color="#39A9DB"
@@ -1286,24 +1099,9 @@ ShallowWrapper {
                 }
               }
             >
-              Login
+              Register
             </Text>
           </CustomButton>,
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            onPress={[Function]}
-            style={
-              Object {
-                "alignSelf": "center",
-                "bottom": 30,
-                "position": "absolute",
-              }
-            }
-          >
-            Don't have an account? Register here
-          </Text>,
         ],
         "style": Object {
           "backgroundColor": "white",
@@ -1321,21 +1119,7 @@ ShallowWrapper {
           "props": Object {
             "accessible": true,
             "allowFontScaling": true,
-            "children": "Welcome to",
-            "ellipsizeMode": "tail",
-          },
-          "ref": null,
-          "rendered": "Welcome to",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "accessible": true,
-            "allowFontScaling": true,
-            "children": "DevHub",
+            "children": " DevHub ",
             "ellipsizeMode": "tail",
             "style": Object {
               "fontSize": 30,
@@ -1344,7 +1128,7 @@ ShallowWrapper {
             },
           },
           "ref": null,
-          "rendered": "DevHub",
+          "rendered": " DevHub ",
           "type": [Function],
         },
         Object {
@@ -1374,8 +1158,24 @@ ShallowWrapper {
             "onChangeText": [Function],
             "onSubmitEditing": [Function],
             "placeholder": "Password",
-            "returnKeyType": "done",
-            "secureTextEntry": true,
+            "returnKeyType": "next",
+          },
+          "ref": Object {
+            "current": null,
+          },
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "autoCapitalize": "none",
+            "onChangeText": [Function],
+            "onSubmitEditing": [Function],
+            "placeholder": "Confirm Password",
+            "returnKeyType": "next",
           },
           "ref": Object {
             "current": null,
@@ -1398,7 +1198,7 @@ ShallowWrapper {
                 }
               }
             >
-              Login
+              Register
             </Text>,
             "color": "#39A9DB",
             "onPress": [Function],
@@ -1411,36 +1211,16 @@ ShallowWrapper {
             "props": Object {
               "accessible": true,
               "allowFontScaling": true,
-              "children": "Login",
+              "children": "Register",
               "ellipsizeMode": "tail",
               "style": Object {
                 "color": "white",
               },
             },
             "ref": null,
-            "rendered": "Login",
+            "rendered": "Register",
             "type": [Function],
           },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "accessible": true,
-            "allowFontScaling": true,
-            "children": "Don't have an account? Register here",
-            "ellipsizeMode": "tail",
-            "onPress": [Function],
-            "style": Object {
-              "alignSelf": "center",
-              "bottom": 30,
-              "position": "absolute",
-            },
-          },
-          "ref": null,
-          "rendered": "Don't have an account? Register here",
           "type": [Function],
         },
       ],
