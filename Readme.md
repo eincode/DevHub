@@ -5,3 +5,12 @@
 ![build](https://img.shields.io/circleci/project/github/RedSparr0w/node-csgo-parser.svg)
 
 An app to help developers connect to each other
+
+To run:
+
+```
+$ git clone https://github.com/eincode/DevHub.git
+$ cd DevHub
+$ yarn
+$ react-native run-ios
+```
